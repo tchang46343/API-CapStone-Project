@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="index.css" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>API Capstone Project</title>
+</head>
+    <body>
+        <h1> DIY Home Improvement</h1>
+        <div class="container">
+            <form class="mainScreen">
+                <label> Please enter a title for this new project:</label>
+                    <input class="title" type="text" required></input>
+            
+                <label> Please describe your DIY Project</label>
+                    <input class="userSearch" type="text" required></input>
+            
+                    <input class="searchResult" type="submit" value="Search"></input>
+            </form>
+                <p id="js-error-message" class="error-message"></p>
+            
+            <section id = "results" class = "hidden">
+                <h2>Search Results Report:</h2>
+                    <ul id="result-list"></ul>
+            </section>
+        </div>
+    <script src="script.js"></script>     
+    </body>
+</html>
