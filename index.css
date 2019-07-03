@@ -1,18 +1,73 @@
 html{
-    box-sizing: border-box;
+box-sizing: border-box;
 }
 *,*:before,*:after{
-    box-sizing: inherit;
+box-sizing: inherit;
+}
+h2{
+    
+    font-family: 'Exo 2', sans-serif;
 }
 h1{
-text-align: center;
-}
-label, input{
-    display: block;
+    font-family: 'Roboto Mono', monospace;
+    text-align: center;
 }
 label{
+    display: block;
+    text-align: center;
     line-height: 26px;
+    font-family: 'Exo 2', sans-serif;
 }
-#result-list{
-    text-align: right;
+
+.resultsContainer{
+    width: 100%;
+    height: auto;
+    display: flex;
+    font-family: 'Exo 2', sans-serif;
 }
+.result-list{
+    text-align: center;
+}
+.box{
+    width:50%;
+    margin: 20px;
+    text-decoration: black solid;
+}
+.mainScreen{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+/* Mobile and tablet users */
+@media screen and (max-width: 680px){
+    .userSearch{
+        border-style: solid;
+        border-color: black;
+        border-radius: 6px;
+        padding: 10px;
+        width: 35%;
+    }   
+    .searchResult{
+        border-style: solid;
+        border-color: black;
+        border-radius: 6px;
+        margin: 10px;
+    }
+    .box1{
+        border-style: solid;
+        border-color: black;
+        border-radius: 6px;
+        width: 40%;
+    }
+    .box2{
+        border-style: solid;
+        border-color: black;
+        border-radius: 6px;
+        width:30%;
+    }
+
+
+}    

@@ -7,27 +7,35 @@
     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
         crossorigin="anonymous"></script>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Exo+2&display=swap" rel="stylesheet">
     <title>API Capstone Project</title>
 </head>
     <body>
         <h1> DIY Home Improvement</h1>
-        <div class="container">
             <form class="mainScreen">
-                <label> Please enter a title for this new project:</label>
-                    <input class="title" type="text" required></input>
-            
                 <label> Please describe your DIY Project</label>
                     <input class="userSearch" type="text" required></input>
-            
                     <input class="searchResult" type="submit" value="Search"></input>
             </form>
                 <p id="js-error-message" class="error-message"></p>
-            
-            <section id = "results" class = "hidden">
-                <h2>Search Results Report:</h2>
+        <div class="resultsContainer">  
+            <div class="box">
+                <h2>Video Results:</h2>
                     <ul id="result-list"></ul>
-            </section>
+            </div>
+            <div class="box">
+                <h2>Item Results:</h2>
+                    <ul id="product-list"></ul>
+            </div>
+                
         </div>
+    <!-- <script>
+        function processEtsyResponse(data){
+            console.log(data);
+        }
+    </script>
+    <script src="https://openapi.etsy.com/v2/listings/active.js?callback=processEtsyResponse&api_key=53wmfi3n9gz2j9n9guxr4baw"></script>     -->
     <script src="script.js"></script>     
     </body>
 </html>
