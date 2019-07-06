@@ -14,12 +14,21 @@ function watchForm(){
     });
 }
 
+$(document).ready(function(){
+$('input.searchResult').on('click', function(event){ 
+    $("body, html").animate({ 
+        scrollTop: $('div.resultsContainer').offset().top 
+    }, 1000);
+    
+})
+});
+
 function getYouTubeData(searchTerm){
     const videoParameters={
         key:apiKey,
         q: searchTerm,
         part: 'snippet',
-        maxResults: '8',
+        maxResults: 4,
     };
     const url = videoBaseUrl + '?'  + jQuery.param(videoParameters);
     console.log(url);
@@ -46,7 +55,7 @@ function displayVideoResults(responseJson){
         `<h3>Title: ${responseJson.items[i].snippet.title}</h3>
             <ul>
             <a href = 'https://www.youtube.com/watch?v=${responseJson.items[i].id.videoId}'target=_blank'> 
-            <img src = ${responseJson.items[i].snippet.thumbnails.default.url}></a>
+            <img src = ${responseJson.items[i].snippet.thumbnails.high.url}></a>
             
             
             </ul>`
@@ -60,7 +69,7 @@ function displayVideoResults(responseJson){
 function getProductResults(searchTerm){
     const keyWord = 'keywords='+searchTerm;
     const maxResults ='limit=8';
-    const url = productBaseUrl + '?' + productApiKey + '&' + keyWord + '&'+ maxResults;
+    const url = productBaseUrl + '&' + productApiKey + '&' + keyWord + '&'+ maxResults;
     console.log(url);
     $.ajax({
         url: 'https://openapi.etsy.com/v2/listings/active.js',
@@ -75,7 +84,7 @@ function getProductResults(searchTerm){
         data: {
             api_key:'53wmfi3n9gz2j9n9guxr4baw',
             keyword: 'outlet',
-            limit: 8,
+            limit: 5,
         },
      
         // Work with the response
@@ -109,8 +118,7 @@ $('#product-list').empty();
       $('#product-list').append(
         `<h3>Title: ${responseJson.results[i].title}</h3>
             <ul>
-            <li> Description: ${responseJson.results[i].description}</li>
-            <li> Description: ${responseJson.results[i].price}</li>
+            <li> Item Price: ${responseJson.results[i].price}</li>
             
             
             

@@ -7,17 +7,19 @@
     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
         crossorigin="anonymous"></script>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Exo+2&display=swap" rel="stylesheet">
     <title>API Capstone Project</title>
 </head>
     <body>
-        <h1> DIY Home Improvement</h1>
-            <form class="mainScreen">
-                <label> Please describe your DIY Project</label>
-                    <input class="userSearch" type="text" required></input>
-                    <input class="searchResult" type="submit" value="Search"></input>
-            </form>
+        <header class = "landingPage">
+                <h1> DIY Home Improvement</h1>
+                    <form class="mainScreen">
+                        <label> Please describe your DIY Project</label>
+                            <input class="userSearch" type="text" required placeholder="Install electrical outlet "></input>
+                            <input class="searchResult" type="submit" value="Search"></input>
+                    </form>       
+        </header>   
                 <p id="js-error-message" class="error-message"></p>
         <div class="resultsContainer">  
             <div class="box">

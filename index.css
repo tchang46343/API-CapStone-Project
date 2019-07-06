@@ -1,16 +1,27 @@
 html{
 box-sizing: border-box;
+background-color: #7F8182;
+
+
 }
 *,*:before,*:after{
 box-sizing: inherit;
 }
-h2{
+ .landingPage{
+    background-image: url('/Users/TerranceChang/Desktop/API-CapStone-Project/Blurr-Image.jpg'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+   
     
-    font-family: 'Exo 2', sans-serif;
-}
+}  
 h1{
     font-family: 'Roboto Mono', monospace;
     text-align: center;
+    color:orange;
+}
+h2{
+    
+    font-family: 'Exo 2', sans-serif;
 }
 label{
     display: block;
@@ -32,6 +43,9 @@ label{
     width:50%;
     margin: 20px;
     text-decoration: black solid;
+    border-style: solid black;
+    border-radius: 5px;
+    background-color: #DFFBFA;
 }
 .mainScreen{
     display: flex;
@@ -43,6 +57,22 @@ label{
 
 /* Mobile and tablet users */
 @media screen and (max-width: 680px){
+
+    .landingPage{
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 150px;
+        border-radius: 5px;
+        line-height: 0;
+        padding: 5px;
+        margin: 0px auto;
+        
+    }
+    label{
+        text-decoration: solid;
+        font-size: 16px;
+        font-weight: bold;
+    }
     .userSearch{
         border-style: solid;
         border-color: black;
@@ -68,6 +98,12 @@ label{
         border-radius: 6px;
         width:30%;
     }
-
-
+    img{
+        display:block;
+        margin-left: 25px;
+        width: 70%;
+    }
+    h2{
+        text-align: center;
+    }
 }    
