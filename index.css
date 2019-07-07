@@ -1,40 +1,53 @@
 html{
 box-sizing: border-box;
-background-color: #7F8182;
+background-color: #313131;
+background-image: url('https://www.intechnic.com/hubfs/Blog/Featured%20Images/36%20Beautiful%20Big%20Background%20Image%20Website%20Designs.jpg'); 
+background-size: cover;
+background-repeat: no-repeat;
 
-
+}
+body,html{
+    height: 100%;
 }
 *,*:before,*:after{
 box-sizing: inherit;
 }
+/* iffuheiruf{
+    height:100vh;
+    background image
+} */
+
  .landingPage{
     background-image: url('/Users/TerranceChang/Desktop/API-CapStone-Project/Blurr-Image.jpg'); 
     background-size: cover;
     background-repeat: no-repeat;
-   
-    
 }  
+.main{
+    min-height: 62.5vh;
+    
+}
 h1{
     font-family: 'Roboto Mono', monospace;
     text-align: center;
-    color:orange;
+    color:#3BEFDB;
+    font-size: 32px;
 }
 h2{
-    
-    font-family: 'Exo 2', sans-serif;
+    font-family: 'Arvo', serif;
 }
 label{
     display: block;
-    text-align: center;
-    line-height: 26px;
-    font-family: 'Exo 2', sans-serif;
+    text-align: right;
+    line-height: 28px;
+    font-family: 'Arvo', serif;
+    color: #DB8A5C;
+    font-weight: bold;
 }
-
 .resultsContainer{
     width: 100%;
     height: auto;
     display: flex;
-    font-family: 'Exo 2', sans-serif;
+    font-family: 'Arvo', serif;
 }
 .result-list{
     text-align: center;
@@ -46,6 +59,7 @@ label{
     border-style: solid black;
     border-radius: 5px;
     background-color: #DFFBFA;
+    
 }
 .mainScreen{
     display: flex;
@@ -55,13 +69,81 @@ label{
     align-content: center;
 }
 
+.legal{
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    
+}
+
+/* Tablet, Desktop, and larger Screen Users  */
+@media screen and (min-width: 681px){
+
+    .landingPage{
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 200px;
+        border-radius: 5px;
+        line-height: 0;
+        padding: 5px;
+        margin: 0px auto;
+        
+    }
+    label{
+        text-decoration: solid;
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+    }
+    .userSearch{
+        border-style: solid;
+        border-color: black;
+        border-radius: 6px;
+        padding: 10px;
+        width: 25%;
+    }  
+    .searchResult{
+        border-style: solid;
+        border-color: black;
+        border-radius: 6px;
+        margin: 10px;
+        font-size: 38px;
+        background-color:#DFFBFA;
+        transition: 8.0ms;
+    }
+    .searchResult:hover{
+        background-color: #53FA36;
+    }     
+    .box1{
+        border-style: solid;
+        border-color: black;
+        border-radius: 6px;
+        width: 40%;
+    }
+    .box2{
+        border-style: solid;
+        border-color: black;
+        border-radius: 6px;
+        width:30%;
+    }
+    img{
+        display:block;
+        margin-left: 25px;
+        width: 70%;
+    }
+    h2{
+        text-align: center;
+    }
+}    
+
 /* Mobile and tablet users */
 @media screen and (max-width: 680px){
 
     .landingPage{
         background-size: cover;
         background-repeat: no-repeat;
-        height: 150px;
+        height: 170px;
         border-radius: 5px;
         line-height: 0;
         padding: 5px;
@@ -79,13 +161,21 @@ label{
         border-radius: 6px;
         padding: 10px;
         width: 35%;
-    }   
+    } 
     .searchResult{
         border-style: solid;
         border-color: black;
         border-radius: 6px;
         margin: 10px;
+        font-size: 20px;
+        line-height: 23px;
+        white-space:none;
+        background-color:#DFFBFA;
+        transition: 8.0ms;
     }
+    .searchResult:hover{
+        background-color: #53FA36;
+    }     
     .box1{
         border-style: solid;
         border-color: black;

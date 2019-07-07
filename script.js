@@ -1,19 +1,17 @@
 'use strict';
 const apiKey = 'AIzaSyCgg-72owDWeVhMRmUcYB58Gp2O0jymQvw';
-const productApiKey ='api_key=53wmfi3n9gz2j9n9guxr4baw';
 const videoBaseUrl = 'https://www.googleapis.com/youtube/v3/search';
-const productBaseUrl = 'https://openapi.etsy.com/v2/listings/active.js?callback=processEtsyResponse';
+// const productBaseUrl = 'https://openapi.etsy.com/v2/listings/active.js?callback=processEtsyResponse';
+// const productApiKey ='53wmfi3n9gz2j9n9guxr4baw';
 
 function watchForm(){
     $('.mainScreen').submit(event =>{
-        console.log("😭");
         event.preventDefault();
         const searchTerm = $('.userSearch').val();
         getYouTubeData(searchTerm);
         getProductResults(searchTerm);
     });
 }
-
 $(document).ready(function(){
 $('input.searchResult').on('click', function(event){ 
     $("body, html").animate({ 
@@ -22,7 +20,6 @@ $('input.searchResult').on('click', function(event){
     
 })
 });
-
 function getYouTubeData(searchTerm){
     const videoParameters={
         key:apiKey,
@@ -44,9 +41,6 @@ function getYouTubeData(searchTerm){
       $('#js-error-message').text(`Something went wrong: ${err.message}`);
     });   
 }
-
-
-
 function displayVideoResults(responseJson){
     console.log(responseJson);
     $('#result-list').empty();
@@ -56,21 +50,13 @@ function displayVideoResults(responseJson){
             <ul>
             <a href = 'https://www.youtube.com/watch?v=${responseJson.items[i].id.videoId}'target=_blank'> 
             <img src = ${responseJson.items[i].snippet.thumbnails.high.url}></a>
-            
-            
             </ul>`
         )};
-    $('#results').removeClass('hidden');
+    $('.resultsContainer').removeClass('hidden');
 
 }
-// function processEtsyResponse(data){
-//     console.log(data);
-// }
+
 function getProductResults(searchTerm){
-    const keyWord = 'keywords='+searchTerm;
-    const maxResults ='limit=8';
-    const url = productBaseUrl + '&' + productApiKey + '&' + keyWord + '&'+ maxResults;
-    console.log(url);
     $.ajax({
         url: 'https://openapi.etsy.com/v2/listings/active.js',
      
@@ -83,7 +69,7 @@ function getProductResults(searchTerm){
         // Tell YQL what we want and that we want JSON
         data: {
             api_key:'53wmfi3n9gz2j9n9guxr4baw',
-            keyword: 'outlet',
+            keywords: searchTerm,
             limit: 5,
         },
      
@@ -93,22 +79,10 @@ function getProductResults(searchTerm){
             console.log(response); // server response
         },
         //TODO: Implement Error Results
-        // error: function(error){
-            
-        // };
+        error: function(error){
+            $('#js-error-message').text(`Something went wrong: ${err.message}`);
+        }
     });
-    // .then(response => {
-    //     if (response.ok){
-    //         return response.json();
-    //     }
-    //     throw new Error(response.statusText);
-    // })
-    // .then(responseJson => displayProductResults(responseJson))
-    // .catch(err => {
-    //   $('#js-error-message').text(`Something went wrong: ${err.message}`);
-    // });  
-//www.homedepot.com/s/drill?NCNI-5">
-
 }
 
 function displayProductResults(responseJson){
@@ -120,11 +94,9 @@ $('#product-list').empty();
             <ul>
             <li> Item Price: ${responseJson.results[i].price}</li>
             
-            
-            
             </ul>`
         )};
-    $('#results').removeClass('hidden');
+    $('.resultsContainer').removeClass('hidden');
 }
 
 
