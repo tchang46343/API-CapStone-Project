@@ -12,19 +12,16 @@ body,html{
 *,*:before,*:after{
 box-sizing: inherit;
 }
-/* iffuheiruf{
-    height:100vh;
-    background image
-} */
 
- .landingPage{
-    background-image: url('/Users/TerranceChang/Desktop/API-CapStone-Project/Blurr-Image.jpg'); 
-    background-size: cover;
-    background-repeat: no-repeat;
-}  
-.main{
+#main{
     min-height: 62.5vh;
-    
+}
+.landingPage{
+    position: relative;
+    top:50px;
+}
+.hidden{
+    display: none;
 }
 h1{
     font-family: 'Roboto Mono', monospace;
@@ -39,9 +36,17 @@ label{
     display: block;
     text-align: right;
     line-height: 28px;
-    font-family: 'Arvo', serif;
-    color: #DB8A5C;
+    font-family: 'Assistant', sans-serif;
+    color:black;
     font-weight: bold;
+    text-decoration: black solid;
+    border-style: solid black;
+    border-radius: 5px;
+    background-color: #DFFBFA;
+    line-height: 20px;
+    font-size: 12px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 .resultsContainer{
     width: 100%;
@@ -51,6 +56,9 @@ label{
 }
 .result-list{
     text-align: center;
+}
+.product-details{
+    list-style-type: none;
 }
 .box{
     width:50%;
@@ -70,31 +78,34 @@ label{
 }
 
 .legal{
+    /* height: 50px; */
     text-align: center;
     font-size: 16px;
     font-weight: bold;
-    color: white;
-    
+    color: white;  
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;  
 }
 
 /* Tablet, Desktop, and larger Screen Users  */
 @media screen and (min-width: 681px){
-
     .landingPage{
-        background-size: cover;
+        background-size: contain;
         background-repeat: no-repeat;
         height: 200px;
         border-radius: 5px;
         line-height: 0;
         padding: 5px;
-        margin: 0px auto;
-        
+        margin: 0px auto;  
     }
     label{
         text-decoration: solid;
-        font-size: 16px;
         font-weight: bold;
         text-align: center;
+        width: 60%;
+
     }
     .userSearch{
         border-style: solid;
@@ -136,24 +147,31 @@ label{
         text-align: center;
     }
 }    
-
 /* Mobile and tablet users */
 @media screen and (max-width: 680px){
+    /* .mainScreen{
 
+    } */
     .landingPage{
-        background-size: cover;
-        background-repeat: no-repeat;
         height: 170px;
         border-radius: 5px;
         line-height: 0;
         padding: 5px;
         margin: 0px auto;
+        position: relative;
+        left: 20px; 
         
     }
     label{
         text-decoration: solid;
         font-size: 16px;
         font-weight: bold;
+    }
+    label{
+        text-align: center;
+        width:60%;
+        position: relative;
+        top:50%;
     }
     .userSearch{
         border-style: solid;
@@ -190,8 +208,8 @@ label{
     }
     img{
         display:block;
-        margin-left: 25px;
-        width: 70%;
+        margin-left: 20px;
+        width: 50%;
     }
     h2{
         text-align: center;

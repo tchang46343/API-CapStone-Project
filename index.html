@@ -10,41 +10,45 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Arvo:700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Arvo:700|Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Assistant&display=swap" rel="stylesheet">
     <title>API Capstone Project</title>
 </head>
     <body>
-        <header class = "landingPage">
-                <h1> DIY Project Assistance</h1>
-                    <form class="mainScreen">
-                        <label> Please describe your DIY Project</label>
-                            <input class="userSearch" type="text" required placeholder="Install electrical outlet "></input>
-                            <input class="searchResult" type="submit" value="Search"></input>
-                    </form>       
-        </header>  
-        
-        <main class="main">
-            <div class="resultsContainer">
-                    <p id="js-error-message" class="error-message"></p>
-            
-                <div class="box">
-                    <h2>Video Results:</h2>
-                        <ul id="result-list"></ul>
-                </div>
-                <div class="box">
-                    <h2>Item Results:</h2>
-                        <ul id="product-list"></ul>
-                </div>   
-            </div> 
-        </main>
-        <footer class="legal">
-            <h3>© 2019 Terrance Chang DIY App</h3>
-        </footer>
-    <!-- <script>
-        function processEtsyResponse(data){
-            console.log(data);
-        }
-    </script>
-    <script src="https://openapi.etsy.com/v2/listings/active.js?callback=processEtsyResponse&api_key=53wmfi3n9gz2j9n9guxr4baw"></script>     -->
+        <div class="content"></div>
+            <header class = "landingPage">
+                    <h1> DIY Project Assistance</h1>
+                        <form class="mainScreen">
+                                <input class="userSearch" type="text" required placeholder="Install electrical outlet "></input>
+                                <input class="searchResult" type="submit" value="Search"></input>
+                            <label>
+                                <p class="instructionMessage">
+                                    Instruction:
+                                    <br>
+                                    Enter a description phrase, your results will produce video content, and product advice for decorating.
+                                    For accurate results be specific in your search.Try these examples(Saninding kitchen cabinets, how to 
+                                    re-surface kitchen counter, and design inspiration for new kitchen)
+                                </p>
+                            </label>
+                        </form>       
+            </header>  
+            <section id="main" class="hidden" >
+                <div class="resultsContainer">
+                        <p id="js-error-message" class="error-message"></p>
+                
+                    <div class="box">
+                        <h2>Video Results:</h2>
+                            <ul id="result-list"></ul>
+                    </div>
+                    <div class="box">
+                        <h2>Item Results:</h2>
+                            <ul id="product-list"></ul>
+                    </div>   
+                </div> 
+            </section>
+        </div>    
+            <footer class="legal">
+                <h3>© 2019 Terrance Chang DIY App</h3>
+            </footer>
     <script src="script.js"></script>     
     </body>
 </html>
