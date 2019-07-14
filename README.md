@@ -1,6 +1,7 @@
-Project Name: DIY Buddy
+<h1 align="center">DIY Buddy </h1> 
 
-Github Live Pages URL:
+
+##Github Live Pages URL:
 
 
                                                 Home Page:
