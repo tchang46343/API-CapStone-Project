@@ -1,10 +1,12 @@
 Project Name: DIY Buddy
 
 Github Live Pages URL:
-Home Page:
+
+
+                                                       Home Page:
 ![](Landing%20Page.png)
 
-Results Page:
+                                                      Results Page:
 ![](Results%20Page.png)
 
                                                      PROJECT SUMMARY
