@@ -1,7 +1,7 @@
 <h1 align="center">DIY Buddy </h1> 
 
 <h2 align="center">Github Live Pages URL </h2> 
-[Click here](https://tchang46343.github.io/DIY-Buddy/)
+[Click here](https://tchang46343.github.io/DIY-Buddy)
 
 
 
