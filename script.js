@@ -1,8 +1,7 @@
 'use strict';
 const apiKey = 'AIzaSyCgg-72owDWeVhMRmUcYB58Gp2O0jymQvw';
 const videoBaseUrl = 'https://www.googleapis.com/youtube/v3/search';
-// const productBaseUrl = 'https://openapi.etsy.com/v2/listings/active.js?callback=processEtsyResponse';
-// const productApiKey ='53wmfi3n9gz2j9n9guxr4baw';
+
 function watchForm(){
     $('.mainScreen').submit(event =>{
         event.preventDefault();
@@ -12,15 +11,17 @@ function watchForm(){
         
     });
 }
+// The section below handles the auto scroll feature for displaying the results. In addition to the auto scroll feature the code below
+// also hides the instructional message once executed.  
 $(document).ready(function(){
-$('input.searchResult').on('click', function(event){ 
-    $("body, html").animate({ 
-        scrollTop: $('div.resultsContainer').offset().top 
-    }, 1000);
-    $('.instructionMessage').hide();
-    
-})
+    $('input.searchResult').on('click', function(event){ 
+        $("body, html").animate({ 
+            scrollTop: $('div.resultsContainer').offset().top 
+        }, 1000);
+        $('.instructionMessage').hide();  
+    })
 });
+
 function getYouTubeData(searchTerm){
     const videoParameters={
         key:apiKey,
