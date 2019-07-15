@@ -78,7 +78,6 @@ label{
 }
 
 .legal{
-    /* height: 50px; */
     text-align: center;
     font-size: 16px;
     font-weight: bold;
@@ -149,9 +148,6 @@ label{
 }    
 /* Mobile and tablet users */
 @media screen and (max-width: 680px){
-    /* .mainScreen{
-
-    } */
     .landingPage{
         height: 170px;
         border-radius: 5px;

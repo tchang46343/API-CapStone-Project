@@ -8,7 +8,6 @@ function watchForm(){
         const searchTerm = $('.userSearch').val();
         getYouTubeData(searchTerm);
         getProductResults(searchTerm);
-        
     });
 }
 // The section below handles the auto scroll feature for displaying the results. In addition to the auto scroll feature the code below
@@ -21,7 +20,6 @@ $(document).ready(function(){
         $('.instructionMessage').hide();  
     })
 });
-
 function getYouTubeData(searchTerm){
     const videoParameters={
         key:apiKey,
@@ -66,13 +64,10 @@ function displayVideoResults(responseJson){
 function getProductResults(searchTerm){
     $.ajax({
         url: 'https://openapi.etsy.com/v2/listings/active.js',
-     
         // The name of the callback parameter, as specified by the YQL service
         jsonp: "callback",
-     
         // Tell jQuery we're expecting JSONP
         dataType: "jsonp",
-     
         // Tell YQL what we want and that we want JSON
         data: {
             api_key:'53wmfi3n9gz2j9n9guxr4baw',
@@ -83,12 +78,10 @@ function getProductResults(searchTerm){
             geo_level: 'country',
             result:0
         },
-     
         // Work with the response
         success: function(response) {
             displayProductResults(response)
             console.log(response); // server response
-
         },
         //TODO: Implement Error Results
         error: function(error){
@@ -96,7 +89,6 @@ function getProductResults(searchTerm){
         }
     });
 }
-
 function displayProductResults(responseJson){
 console.log(responseJson);
 $('#product-list').empty();
