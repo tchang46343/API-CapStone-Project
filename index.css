@@ -53,12 +53,27 @@ label{
     height: auto;
     display: flex;
     font-family: 'Arvo', serif;
+    
+}
+.resultsContainer h3{
+    font-weight: 400;
+    margin-bottom: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 15px;
 }
 .result-list{
     text-align: center;
 }
 .product-details{
     list-style-type: none;
+}
+.price{
+    margin-bottom: 10px;
+}
+#result-list ul, #result-list, #product-list, #product-list ul{
+    padding-left: 0;
 }
 .box{
     width:50%;
@@ -67,6 +82,7 @@ label{
     border-style: solid black;
     border-radius: 5px;
     background-color: #DFFBFA;
+    padding: 40px;
     
 }
 .mainScreen{
@@ -75,6 +91,12 @@ label{
     justify-content: center;
     align-items: center;
     align-content: center;
+}
+img{
+    display:block;
+    max-width: 100%;
+    height: auto;
+
 }
 
 .legal{
@@ -86,7 +108,9 @@ label{
     left: 0;
     bottom: 0;
     width: 100%;  
+    color:#3BEFDB;
 }
+
 
 /* Tablet, Desktop, and larger Screen Users  */
 @media screen and (min-width: 681px){
@@ -125,23 +149,12 @@ label{
     .searchResult:hover{
         background-color: #53FA36;
     }     
-    .box1{
-        border-style: solid;
-        border-color: black;
-        border-radius: 6px;
-        width: 40%;
+
+    .box{
+        padding:20px;
     }
-    .box2{
-        border-style: solid;
-        border-color: black;
-        border-radius: 6px;
-        width:30%;
-    }
-    img{
-        display:block;
-        margin-left: 25px;
-        width: 70%;
-    }
+    
+   
     h2{
         text-align: center;
     }
@@ -158,6 +171,8 @@ label{
         left: 20px; 
         
     }
+    
+
     label{
         text-decoration: solid;
         font-size: 16px;
@@ -190,24 +205,14 @@ label{
     .searchResult:hover{
         background-color: #53FA36;
     }     
-    .box1{
-        border-style: solid;
-        border-color: black;
-        border-radius: 6px;
-        width: 40%;
+    .box{
+        padding: 10px;
     }
-    .box2{
-        border-style: solid;
-        border-color: black;
-        border-radius: 6px;
-        width:30%;
-    }
-    img{
-        display:block;
-        margin-left: 20px;
-        width: 50%;
-    }
+    
     h2{
         text-align: center;
     }
-}    
+    
+} 
+
+

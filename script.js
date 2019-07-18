@@ -48,7 +48,7 @@ function displayVideoResults(responseJson){
         if(responseJson.items.length>0){
             for (let i = 0; i < responseJson.items.length; i++){
                 $('#result-list').append(
-                `<h3>Title: ${responseJson.items[i].snippet.title}</h3>
+                `<h3>${responseJson.items[i].snippet.title}</h3>
                     <ul>
                     <a href = 'https://www.youtube.com/watch?v=${responseJson.items[i].id.videoId}'target=_blank'> 
                     <img src = ${responseJson.items[i].snippet.thumbnails.high.url}></a>
@@ -95,10 +95,10 @@ $('#product-list').empty();
     if(responseJson.results.length>0){
         for (let i = 0; i < responseJson.results.length; i++){
             $('#product-list').append(
-                `<h3>Title: ${responseJson.results[i].title}</h3>
-                    <ul class = "product-details">
-                    <li> Item Price: ${responseJson.results[i].price}</li>
-                    <li> <img src="${responseJson.results[i].Images[0].url_75x75}" alt= "${responseJson.results[i].description}"/></li>
+                `<h3>${responseJson.results[i].title}</h3>
+                    <ul class="product-details">
+                    <li class="price"> $${responseJson.results[i].price}</li>
+                    <li> <img src="${responseJson.results[i].Images[0].url_fullxfull}" alt= "${responseJson.results[i].description}"/></li>
                     </ul>`
         )};
     } 
